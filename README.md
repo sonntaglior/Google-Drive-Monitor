@@ -43,8 +43,8 @@ This script ensures a higher level of privacy and security for your Google Drive
 ### Exploitation of OAuth Consent:
 If a victim grants consent to a malicious OAuth application with a highly sensitive scope (e.g., https://www.googleapis.com/auth/drive), the attacker could gain extensive access to the victim's Google Drive and execute high privileged actions on behalf of it. This level of access might enable various harmful operations.
 ### Ransomware Attacks via Permission Modification:
-An attacker, leveraging the permissions.create API, could add themselves as editors of files owned by the victim. They could then potentially transfer the ownership of these files to themselves using the same API. Once ownership is transferred, the attacker could use the permissions.delete API to revoke all other users' access, effectively locking out the legitimate owner and other users.
+An attacker, leveraging the **permissions.create** API, could add themselves as editors of files owned by the victim. They could then potentially transfer the ownership of these files to themselves using the same API. Once ownership is transferred, the attacker could use the **permissions.delete** API to revoke all other users' access, effectively locking out the legitimate owner and other users.
 ### Destructive Actions:
-Attackers might engage in destructive operations, such as using the files.delete API to completely erase files or folders from the victim's Drive.
+Attackers might engage in destructive operations, such as using the **files.delete** API to completely erase files or folders from the victim's Drive.
 ### Risks of Read-Only Access:
-Even less privileged scopes like https://www.googleapis.com/auth/drive.readonly pose significant risks. Such access could enable adversaries to exfiltrate sensitive data by using the files.get API to download any file from the Drive account, potentially leading to data breaches.
+Even less privileged scopes like https://www.googleapis.com/auth/drive.readonly pose significant risks. Such access could enable adversaries to exfiltrate sensitive data by using the **files.get** API to download any file from the Drive account, potentially leading to data breaches.
